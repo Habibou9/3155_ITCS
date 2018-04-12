@@ -1,0 +1,25 @@
+<h1>Listing Contacts</h1>
+ 
+<table>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Phone Number</th>
+    <th>Email Address</th>
+    <th>Home Address</th>
+    <th>Company</th>
+  </tr>
+ 
+  <% @addresses.each do |address| %>
+    <tr>
+      <td><%= address.FirstName %></td>
+      <td><%= address.LastName %></td>
+      <td><%= address.PhoneNumber %></td>
+      <td><%= address.EmailAddress %></td>
+      <td><%= address.HomeAddress %></td>
+      <td><%= address.Company %></td>
+      <td><%= link_to 'Show', address_path(address) %></td>
+    </tr>
+  <% end %>
+</table>
+thumbsup 0
