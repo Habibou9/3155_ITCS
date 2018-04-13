@@ -3,6 +3,7 @@ class AddressesController < ApplicationController
         @addresses = Address.all
     end
     def new
+        @address = Address.new
     end
     def show
         @address = Address.find(params[:id])
@@ -10,8 +11,11 @@ class AddressesController < ApplicationController
     def create
         @address = Address.new(address_params)
         
-        @address.save
-        redirect_to @address
+       if @address.save
+             redirect_to @address
+            else
+             render 'new'
+       end
     end
 end
 

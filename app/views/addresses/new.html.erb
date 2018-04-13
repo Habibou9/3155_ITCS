@@ -1,6 +1,21 @@
 <h1>Welcome to the Address Book</h1>
 
 <%= form_for :address, url: addresses_path do |f| %>
+
+<% if @address.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@address.errors.count, "Error") %> prohibited
+        this contact from being saved:
+      </h2>
+      <ul>
+        <% @address.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
   <p>
     <%= f.label :'First Name' %><br>
     <%= f.text_field :FirstName %>
