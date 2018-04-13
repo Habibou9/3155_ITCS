@@ -1,0 +1,50 @@
+<%= form_for @address do |f| %>
+ 
+  <% if @address.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@address.errors.count, "Error") %> prohibited
+        this contact from being saved:
+      </h2>
+      <ul>
+        <% @address.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+ <p>
+    <%= f.label :'First Name' %><br>
+    <%= f.text_field :FirstName %>
+  </p>
+ 
+  <p>
+    <%= f.label :'Last Name' %><br>
+    <%= f.text_area :LastName %>
+  </p>
+  
+  <p>
+    <%= f.label :'Phone Number' %><br>
+    <%= f.text_area :PhoneNumber %>
+  </p>
+  
+  <p>
+    <%= f.label :'Email Address' %><br>
+    <%= f.text_area :EmailAddress %>
+  </p>
+  
+  <p>
+    <%= f.label :'Home Address' %><br>
+    <%= f.text_area :HomeAddress %>
+  </p>
+  
+  <p>
+    <%= f.label :'Company' %><br>
+    <%= f.text_area :Company %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

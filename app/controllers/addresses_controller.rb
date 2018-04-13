@@ -11,7 +11,9 @@ class AddressesController < ApplicationController
     def create
         @address = Address.new(address_params)
         
+        
        if @address.save
+         
              redirect_to @address
             else
              render 'new'
