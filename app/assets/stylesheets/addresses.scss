@@ -18,3 +18,14 @@ textarea{
     text-align:center;
     resize: none;
 }
+
+input[type=button], input[type=submit]{
+    padding: 16px 20px;
+    border: none;
+    background-color: #FAD7A0;
+    color: #566573;
+    float: right;
+    text-decoration: none;
+    text-align:center;
+    cursor: pointer;
+}
