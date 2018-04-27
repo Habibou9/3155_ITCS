@@ -13,8 +13,8 @@
 </head>
 
 
-<h1>Listing Contacts</h1>
- <%= link_to 'New Contact', new_address_path %>
+<h1>Contacts</h1>
+
 <table style="width: 80%", align="center">
   <tr style="background-color: grey">
     <th>First Name</th>
@@ -23,12 +23,12 @@
     <th>Email Address</th>
     <th>Home Address</th>
     <th>Company</th>
-    <th>Display</th>
-    <th>Editing</th>
+    <th>Info</th>
+    <th>Edit</th>
     <th>Delete</th>
   </tr>
  
-  <% @addresses.each do |address| %>
+  <% @address.each do |address| %>
     <tr>
       <td><%= address.FirstName %></td>
       <td><%= address.LastName %></td>
@@ -36,9 +36,9 @@
       <td><%= address.EmailAddress %></td>
       <td><%= address.HomeAddress %></td>
       <td><%= address.Company %></td>
-      <td><%= link_to 'Show informations', address_path(address) %></td>
-      <td><%= link_to 'Edit informations', edit_address_path(address) %></td>
-      <td><%= link_to 'Delete Contact',
+      <td><%= link_to 'Info', address_path(address) %></td>
+      <td><%= link_to 'Edit', edit_address_path(address) %></td>
+      <td><%= link_to 'Delete',
                              address_path(address),
                              method: :delete,
                              data: { confirm: 'Are you sure?' } %></td>

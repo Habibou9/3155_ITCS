@@ -1,55 +1,40 @@
-
+<div style = "text-align: center">
+    
+    
   <p>
-    <strong>FirstName:</strong>
+    <strong>First Name</strong>
     <%= @address.FirstName%><br>
   </p>
   
    <p>
-    <strong>LastName:</strong>
+    <strong>Last Name</strong>
     <%= @address.LastName%><br>
   </p>
   
    <p>
-    <strong>PhoneNumber:</strong>
+    <strong>Phone Number</strong>
     <%= @address.PhoneNumber%><br>
   </p>
   
+ 
+  
    <p>
-    <strong>EmailAddress:</strong>
+    <strong>Email Address</strong>
     <%= @address.EmailAddress%><br>
   </p>
   
    <p>
-    <strong>Company:</strong>
+    <strong>Home Address</strong>
+    <%= @address.HomeAddress%><br>
+  </p>
+  
+   <p>
+    <strong>Company</strong>
     <%= @address.Company%><br>
   </p>
   
- <h2>Comments</h2>
-  <% @address.comments.each do |comment| %>
-  <p>
-    <strong>Events(ex: Date of Birth):</strong>
-    <%= comment.dateofbirth %>
-  </p>
+  <h2>Add a Comment:</h2>
+    <%= render 'comments/form' %>
+  
+  </div>
  
-  <p>
-    <strong>Hobbies:</strong>
-    <%= comment.body %>
-  </p>
- <% end %>
-
- <h2>Add a comment:</h2>
-  <%= form_for([@address, @address.comments.build]) do |f| %>
-  <p>
-    <%= f.label :dateofbirth, 'Events(ex: Date of Birth):' %><br>
-    <%= f.text_field :dateofbirth %>
-  </p>
-  <p>
-    <%= f.label :body, 'Hobbies:' %><br>
-    <%= f.text_area :body %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
-
-  <%= link_to 'Contact Listing', addresses_path %>

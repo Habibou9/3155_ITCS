@@ -1,6 +1,7 @@
 class AddressesController < ApplicationController
     def index
-        @addresses = Address.all
+         @address = Address.all
+        
     end
     def new
         @address = Address.new
@@ -39,6 +40,7 @@ end
 
 
 private
-def address_params
-    params.require(:address).permit(:FirstName, :LastName, :PhoneNumber, :EmailAddress, :HomeAddress, :Company)
-end
+    def address_params
+        params.require(:address).permit(:FirstName, :LastName, :PhoneNumber, :EmailAddress, :HomeAddress, :Company)
+    end
+    
