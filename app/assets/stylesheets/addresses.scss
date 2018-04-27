@@ -10,6 +10,7 @@ input[type=text]{
     background-color: #797D7F;
     text-align:center;
     margin-left: 120px;
+    color: white;
     
 }
 
@@ -28,7 +29,7 @@ textarea{
 input[type=button], input[type=submit]{
     padding: 16px 20px;
     border: none;
-    background-color: #FAD7A0;
+    background-color: clear;
     color: #566573;
     float: right;
     text-decoration: none;
@@ -37,3 +38,12 @@ input[type=button], input[type=submit]{
     
 }
 
+
+p{
+    color: white;
+    text-align:center;
+}
+
+ul{
+    color:white;
+}

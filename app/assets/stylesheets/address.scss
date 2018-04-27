@@ -4,11 +4,22 @@
 
 h1{
     font-size: 42px;
-    color: green;
+    color: white;
     text-align: center;
 }
 
 body{
-    background: white;
+    background-image: url("https://www.planwallpaper.com/static/images/maxresdefault_YodSsVN.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: auto;
     
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    height: 25%;
 }

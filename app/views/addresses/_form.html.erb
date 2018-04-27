@@ -2,7 +2,7 @@
 
   <% if @address.errors.any? %>
     <div id="error_explanation">
-      <h2 style="color: blue">
+      <h2 style="color: white">
         <%= pluralize(@address.errors.count, "Error") %> prohibited
         this contact from being saved:
       </h2>
@@ -13,9 +13,6 @@
       </ul>
     </div>
   <% end %>
-
- <center>
-   <strong>
 
  <p>
     <%= f.label :FirstName , 'First Name' %><br>
@@ -46,8 +43,6 @@
     <%= f.label :Company %><br>
     <%= f.text_area :Company %>
   </p>
-</strong>
-</center>
   <p>
     <%= f.submit %>
   </p>
