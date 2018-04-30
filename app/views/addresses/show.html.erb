@@ -1,39 +1,37 @@
-<div>
-    
-  <p>
-    <strong>First Name</strong>
-    <%= @address.FirstName%><br>
-  </p>
-  
-   <p>
-    <strong>Last Name</strong>
-    <%= @address.LastName%><br>
-  </p>
-  
-   <p>
-    <strong>Phone Number</strong>
-    <%= @address.PhoneNumber%><br>
-  </p>
-  
-   <p>
-    <strong>Email Address</strong>
-    <%= @address.EmailAddress%><br>
-  </p>
-  
-   <p>
-    <strong>Home Address</strong>
-    <%= @address.HomeAddress%><br>
-  </p>
-  
-   <p>
-    <strong>Company</strong>
-    <%= @address.Company%><br>
-  </p>
-  
-  <h2>More Info:</h2>
-  <%= render @address.comments %>
-  <%= render 'comments/form' %>
 
+   <a class = "link"><%= link_to 'Update Contact', edit_address_path %></a>
+   
+   <a class = "link"><%= link_to 'Delete Contact',
+                              address_path,
+                              method: :delete,
+                              data: { confirm: 'Are you sure?' } %></a>
+
+
+   <ul id = "attributes">
+    
+    <li class = "listitem"><strong class = "attribute">First Name: <%= @address.FirstName%></strong></li>
+   
+   
+    <li class = "listitem"><strong>Last Name: <%= @address.LastName%></strong></li>
   
-</div>
+  
+   
+    <li class = "listitem"><strong>Phone Number: <%= @address.PhoneNumber%></strong></li>
+   
+  
+   
+    <li class = "listitem"><strong>Email Address: <%= @address.EmailAddress%></strong></li>
+   
+  
+    <li class = "listitem"><strong>Home Address: <%= @address.HomeAddress%></strong></li>
+  
+    <li class = "listitem"><strong>Company: <%= @address.Company%></strong></li>
  
+  
+</ul>
+                             
+
+    <div class = "listform"><%= render @address.comments %></div>
+    <div class = "listform"><%= render 'comments/form' %></div>
+
+   

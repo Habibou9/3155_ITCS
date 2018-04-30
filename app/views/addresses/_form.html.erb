@@ -13,38 +13,40 @@
       </ul>
     </div>
   <% end %>
-<div class="form">
- <p>
-    <%= f.label :FirstName , 'First Name' %><br>
-    <%= f.text_field :FirstName %>
-  </p>
 
-  <p>
-    <%= f.label :LastName , 'Last Name' %><br>
-    <%= f.text_area :LastName %>
-  </p>
+<div>
+  <div class = "left"><%= f.label :FirstName , 'First Name' %></div>
+  <div class = "right"> <%= f.text_field :FirstName %> </div>
+  
+</div>
+  
+  <div>
+  <div class = "left"><%= f.label :LastName , 'Last Name' %></div>
+  <div class = "right"><%= f.text_area :LastName %></div>
+  </div>
 
-  <p>
-    <%= f.label :PhoneNumber , 'Phone Number'%><br>
-    <%= f.text_area :PhoneNumber %>
-  </p>
+  <div>
+    <div class = "left"><%= f.label :PhoneNumber , 'Phone Number'%></div>
+    <div class = "right"><%= f.text_area :PhoneNumber %></div>
+  </div>
 
-  <p>
-    <%= f.label :EmailAddress ,'Email Address'%><br>
-    <%= f.text_area :EmailAddress %>
-  </p>
+  <div>
+    <div class = "left"><%= f.label :EmailAddress ,'Email Address'%></div>
+    <div class = "right"><%= f.text_area :EmailAddress %></div>
+  </div>
 
-  <p>
-    <%= f.label :HomeAddress , 'Home Address' %><br>
-    <%= f.text_area :HomeAddress %>
-  </p>
+  <div>
+    <div class = "left"><%= f.label :HomeAddress , 'Home Address' %></div>
+    <div class = "right"><%= f.text_area :HomeAddress %></div>
+  </div>
 
-  <p>
-    <%= f.label :Company %><br>
-    <%= f.text_area :Company %>
-  </p>
-  <p>
+  <div>
+    <div class = "left"><%= f.label :Company %></div>
+    <div class = "right"><%= f.text_area :Company %></div>
+  </div>
+  
+  <p id = "CreateContact">
     <%= f.submit %>
   </p>
-</div>
+
 <% end %>

@@ -9,11 +9,16 @@ h1{
 }
 
 body{
-    background-image: url("https://www.planwallpaper.com/static/images/maxresdefault_YodSsVN.jpg");
-    background-repeat: no-repeat;
-    background-position: right top;
-    background-size: auto;
+      background: linear-gradient(132deg, #ec5218, #1665c1);
+      background-size: 400% 400%;
+      animation: BackgroundGradient 30s ease infinite;
     
+}
+
+@keyframes BackgroundGradient {
+          0% {background-position: 0% 50%;}
+          50% {background-position: 100% 50%;}
+          100% {background-position: 0% 50%;}
 }
 
 img {
@@ -23,3 +28,12 @@ img {
     width: 25%;
     height: 25%;
 }
+
+
+ol#List li{
+    
+    padding: 5px;
+    display: flex;
+    
+}
+

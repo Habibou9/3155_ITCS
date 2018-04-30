@@ -1,50 +1,12 @@
-<head>
-  <style>
-    table, th, td {
-      border: 2px solid black;
-      border-collapse: collapse;
-      border-color:white;
-    }
-    tr {
-      color:white;
-    }
-    th, td{
-      padding: 10px;
-      text-align: left;
-    }
-  </style>
-</head>
-
-
 <h1>Contacts</h1>
 
-<table style="width: 80%", align="center">
-  <tr>
-    <th>First Name</th>
-    <th>Last Name</th>
-    <th>Phone Number</th>
-    <th>Email Address</th>
-    <th>Home Address</th>
-    <th>Company</th>
-    <th>Info</th>
-    <th>Edit</th>
-    <th>Delete</th>
-  </tr>
- 
+<ol id = "List" style="A">
+
   <% @address.each do |address| %>
-    <tr>
-      <td><%= address.FirstName %></td>
-      <td><%= address.LastName %></td>
-      <td><%= address.PhoneNumber %></td>
-      <td><%= address.EmailAddress %></td>
-      <td><%= address.HomeAddress %></td>
-      <td><%= address.Company %></td>
-      <td><%= link_to 'Info', address_path(address) %></td>
-      <td><%= link_to 'Edit', edit_address_path(address) %></td>
-      <td><%= link_to 'Delete',
-                             address_path(address),
-                             method: :delete,
-                             data: { confirm: 'Are you sure?' } %></td>
-    </tr>
+      
+          <li><%= link_to address_path(address) do %>
+              <strong><%= address.FirstName%></strong>
+              <strong><%= address.LastName%></strong></li>
+              <% end %>
   <% end %>
-</table>
+</ol>
