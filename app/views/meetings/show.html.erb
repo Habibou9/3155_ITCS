@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+<div class = "Meetingshow"> 
+  <p>
+    <strong>Name:</strong>
+    <%= @meeting.name %>
+  </p>
+  
+  <p>
+    <strong>Start time:</strong>
+    <%= @meeting.start_time %>
+  </p>
+  
+  
+</div>
+
+<a class = "editlink"><%= link_to 'Edit Meeting', edit_meeting_path(@meeting) %></a><br>
+  
+<br><a class = "backlink"><%= link_to 'Back to View Meetings', meetings_path %></a>

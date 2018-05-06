@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'auth/failure', to: redirect('/')
   get 'signout', to: 'sessions#destroy'
   
+  resources :meetings
   
 resources :addresses do 
   resources :comments

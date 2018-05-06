@@ -41,6 +41,6 @@ end
 
 private
     def address_params
-        params.require(:address).permit(:FirstName, :LastName, :PhoneNumber, :EmailAddress, :HomeAddress, :Company)
+        params.require(:address).permit(:image, :FirstName, :LastName, :PhoneNumber, :EmailAddress, :HomeAddress, :Company)
     end
     

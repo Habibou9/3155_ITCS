@@ -1,11 +1,12 @@
 
-   <a class = "link"><%= link_to 'Update Contact', edit_address_path %></a>
+   <a class = "Updatelink"><%= link_to 'Update Contact', edit_address_path %></a><br>
    
-   <a class = "link"><%= link_to 'Delete Contact',
+    <br> <a class = "Deletelink"><%= link_to 'Delete Contact',
                               address_path,
                               method: :delete,
                               data: { confirm: 'Are you sure?' } %></a>
 
+    <%= image_tag(@address.image_url.to_s) %>
 
    <ul id = "attributes">
     
@@ -23,15 +24,17 @@
     <li class = "listitem"><a href = "https://www.google.com/gmail/"><strong>Email Address: <%= @address.EmailAddress%></strong></a></li>
    
   
-    <li class = "listitem"><strong>Home Address: <%= @address.HomeAddress%></strong></li>
+    <li class = "listitem"><a href = "https://www.google.com/maps/place/<%= @address.HomeAddress%>" ><strong>Home Address: <%= @address.HomeAddress%></a></strong></li>
   
     <li class = "listitem"><strong>Company: <%= @address.Company%></strong></li>
  
   
 </ul>
-                             
 
-    <div class = "listform"><%= render @address.comments %></div>
-    <div class = "listform"><%= render 'comments/form' %></div>
+
+
+
+
+
 
    
