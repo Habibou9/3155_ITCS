@@ -19,10 +19,10 @@
         <li><a class = "navlink"><%= link_to 'View Meetings' , meetings_path %></a></li>
       
     </ul>
-    <div>
+    <div class = "login-logout">
       <% if current_user %> 
       <strong style="color: white">
-        Signed in as <strong><%= current_user.name %></strong>!
+        Signed in as <strong><%= current_user.name %></strong>!<br>
           <%= link_to "Sign out", signout_path, id: "sign_out" %>
       <% end %></li>
     </div>
